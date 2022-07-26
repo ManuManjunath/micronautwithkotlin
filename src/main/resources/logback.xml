@@ -1,0 +1,22 @@
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <withJansi>true</withJansi>
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%cyan(%d{HH:mm:ss.SSS}) %gray([%thread]) %highlight(%-5level) %magenta(%logger{36}) - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- To view debug level messages from current application, add the below -->
+    <logger name="com.example.micronautbasics" level="DEBUG"/>
+    <logger name="io.micronaut.data.query" level="DEBUG"/>
+    <logger name="org.hibernate.sql" level="DEBUG"/>
+
+
+    <!-- Retain this to make sure 3rd party applications will still log at info level -->
+    <root level="info">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

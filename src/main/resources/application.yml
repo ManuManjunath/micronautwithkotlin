@@ -1,0 +1,44 @@
+micronaut:
+  application:
+    name: micronautwithkotlin
+  server:
+    port: ${SERVER_PORT:8081}
+    # This uses 8081 as fallback option, if env variable SERVER_PORT is not specified.
+netty:
+  default:
+    allocator:
+      max-order: 3
+hello:
+  world:
+    message: "Hello from app.yml conf file"
+language:
+  translation:
+    english: "one two three"
+    spanish: "uno des tres"
+    hindi: "ek do teen"
+#flyway:
+#  datasources:
+#    default:
+#      enabled: true
+#      clean-schema: false
+#      url: ${PG_JDBC_URL:`jdbc:postgresql://127.0.0.1:5432/mn-stock-broker`}
+#      user: postgres
+#      password: secret
+#      driver-class-name: org.postgresql.Driver
+#      schemas: mn
+#      default-schema: mn
+#      dialect: POSTGRES
+#datasources:
+#  default:
+#    url: ${PG_JDBC_URL:`jdbc:postgresql://127.0.0.1:5432/mn-stock-broker`}
+#    username: postgres
+#    password: secret
+#    driver-class-name: org.postgresql.Driver
+#    schema-generate: NONE
+#    dialect: POSTGRES
+#jpa:
+#  default:
+#    packages-to-scan: "com.example.micronautwithkotlin.stock"
+#    properties:
+#      hibernate:
+#        show_sql: false
